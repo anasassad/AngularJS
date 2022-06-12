@@ -6,6 +6,8 @@
 
     app.controller("DIController",DIController);
 
+    //Inject the instance of scope and filter inside our function called DIController
+    // ... to avoid the non-function of our js when we will minify it later
     DIController.$inject = ['$scope','$filter'];
 
     function DIController($scope,$filter) {
