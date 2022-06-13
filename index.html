@@ -7,10 +7,9 @@
     <title>AngularJS</title>
 </head>
 <body>
-    <div ng-controller="DIController">
-        <label>Changing text inside our Input to Uppercase</label>
-        <br><br>
-        <input type="text" ng-model="name" ng-blur="upperCase()">
+    <div ng-controller="MessageController">
+        <label>Name of the last company I worked for is {{ companyName}}</label>
+        <p>{{yearOfresign()}}</p>
     </div>
 
     <script src="angular/angular.min.js"></script>

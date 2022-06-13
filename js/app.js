@@ -4,21 +4,15 @@
 
     var app = angular.module("EntryMainModule", []);
 
-    app.controller("DIController",DIController);
+    app.controller("MessageController",MessageController);
 
     //Inject the instance of scope and filter inside our function called DIController
     // ... to avoid the non-function of our js when we will minify it later
-    DIController.$inject = ['$scope','$filter'];
+    MessageController.$inject = ['$scope'];
 
-    function DIController($scope,$filter) {
+    function MessageController($scope) {
 
-        $scope.name = "Ahmed";
-        $scope.upperCase = function(){
-            var upper = $filter('uppercase');
-            $scope.name = upper($scope.name);
-        }
+        $scope.companyName = "Avito";
+        $scope.yearOfresign = () => "2022";
     }
 })()
-
-// Minified Code
-//(function(){var app=angular.module("EntryMainModule",[]);app.controller("DIController",DIController);DIController.$inject=['$scope','$filter'];function DIController($scope,$filter){$scope.name="Ahmed";$scope.upperCase=function(){var upper=$filter('uppercase');$scope.name=upper($scope.name)}}})()
