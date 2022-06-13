@@ -1,5 +1,5 @@
 (function () {
-    // This snippet code for resolving problem of scoping variables
+    // This snippet code for resolving problem of undeclared variables
     'use strict'
 
     var app = angular.module("EntryMainModule", []);
