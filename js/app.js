@@ -14,5 +14,11 @@
 
         $scope.companyName = "Avito";
         $scope.yearOfresign = () => "2022";
+
+        $scope.View = 'Hydrangeas';
+
+        $scope.switchView = () => {
+            $scope.View = 'Chrysanthemum';
+        }
     }
 })()
