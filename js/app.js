@@ -6,19 +6,36 @@
 
     app.controller("MessageController",MessageController);
 
+    //Register a custom filter
+    app.filter('custom',CustomFilter);
+
     //Inject the instance of scope and filter inside our function called DIController
     // ... to avoid the non-function of our js when we will minify it later
-    MessageController.$inject = ['$scope'];
+    MessageController.$inject = ['$scope','$filter','customFilter'];
 
-    function MessageController($scope) {
+    function MessageController($scope,$filter,CustomFilter) {
 
-        $scope.companyName = "Avito";
+        //Using filter to Capitalize the comapanyName
+        $scope.companyName = $filter('uppercase')('Avito');
+
         $scope.yearOfresign = () => "2022";
 
-        $scope.View = 'Hydrangeas';
+        $scope.View = CustomFilter('Hydrangeas');
 
         $scope.switchView = () => {
             $scope.View = 'Chrysanthemum';
         }
     }
+
+    //Our custom filter in Javascript
+    function CustomFilter(){
+        return function (input){
+            if (input == 'Hydrangeas'){
+                return input ;
+            }
+            return input.concat(' SCM') ;
+        }
+    }
+
+
 })()
