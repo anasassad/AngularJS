@@ -8,7 +8,8 @@
 </head>
 <body>
     <div ng-controller="MessageController">
-        <label>Name of the last company I worked for is {{ companyName}}</label>
+        <!-- Our custom filter in the HTML -->
+        <label>Name of the last company I worked for is {{ companyName | custom}}</label>
         <p>{{yearOfresign()}}</p>
 
         <!-- Interpolation Expression inside src image-->
