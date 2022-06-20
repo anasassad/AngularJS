@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digest Cycle</title>
+    <title>Digest Cycle Part 2</title>
 </head>
 <body>
-    <div ng-controller="MainController">
+    <h1>Digest Cycle Part 2 ($digest and $apply)</h1>
+    <div ng-controller="CounterController">
         <button ng-click="increaseByOne()">
             increaseByOne
         </button>
+        
         <p>Output : {{ counter }}</p>
     </div>
 
