@@ -1,10 +1,10 @@
 # AngularJS
 
 
-Section 5 : ## DigestCycle
+**Section 5 :**  *DigestCycle*
 
 
-- @Digest @Cycle @: running digest loops until all watchers report that nothing has changed .
+- **Digest Cycle :** running digest loops until all watchers report that nothing has changed .
 
     > Dirty checking
 
