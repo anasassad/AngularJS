@@ -11,7 +11,20 @@
     MainController.$inject = ['$scope'];
 
     function MainController($scope) {
+            $scope.counter = 0 ;
 
+            $scope.increaseByOne = function () {
+                $scope.counter++;
+            }
+
+            $scope.$watch(function(){
+                console.log("Digest Notification for watchers");
+            });
+
+            // $scope.$watch('counter',function(newValue , oldValue){
+            //     console.log("oldValue",oldValue);
+            //     console.log("newValue",newValue);
+            // })
     }
 
 })()
