@@ -1,19 +1,15 @@
 # AngularJS
 
 
-**Section 5 :**  *DigestCycle*
+## Section 5 :  
+**  DigestCycle PART 2 **
 
 
-- **Digest Cycle :** running digest loops until all watchers report that nothing has changed .
+- Digest Cycle does not get triggered automatically if events are unaware of Angular
+- **Solution :**
 
-    > Dirty checking
-
-- ### Several ways to set up watchers :
-
-    > `$scope.$watch` -- don't do this in a controller
-    
-    > `{{ someProp }}`
-   
-    > `<input ... ng-model="someProp"`
-
-- Only applies to things done inside of the Angular context .
+   > Call `$digest` after your custom code
+   > 
+   > Wrap your custom code inside `$apply`
+   > 
+   > Find Angular specific service that handles the same functionality . e.g `$timeout`
