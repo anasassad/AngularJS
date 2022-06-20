@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AngularJS</title>
+    <title>Digest Cycle</title>
 </head>
 <body>
-    <div ng-controller="MessageController">
-        <!-- Our custom filter in the HTML -->
-        <label>Name of the last company I worked for is {{ companyName | custom}}</label>
-        <p>{{yearOfresign()}}</p>
-
-        <!-- Interpolation Expression inside src image-->
-        <button ng-click="switchView()">Switch Image</button>
-        <br>
-        <hr width="100" style="float: left;">
-        <br>
-        <img ng-src="img/{{View}}.jpg" width="100" height="100" alt="{{View}}">
+    <div ng-controller="MainController">
+       
     </div>
 
     <script src="angular/angular.min.js"></script>
