@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="EntryMainModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - ng Repeat</title>
+</head>
+<body>
+    <h1>Ng Repeat</h1>
+    <div ng-controller="ShoppingListController">
+        <!-- ShoppingList #1 -->
+        <h2>Shopping List items (Strings):</h2>
+        <ul>
+            <li ng-repeat="item in shoppingList1">{{ item }}</li>
+        </ul>
+        <!-- ShoppingList #2 -->
+        <h2>Shopping List items (Objects):</h2>
+        <ul>
+            <li ng-repeat="item in shoppingList2">Buy {{ item.quantity }} of {{ item.name}}.</li>
+        </ul>
+        <!-- ShoppingList #3 -->
+        <!-- <input type="number" ng-model="shoppingList2[0].quantity"> -->
+        <h2>Shopping List items (Objects with its INDEX):</h2>
+        <ul style="list-style: none;">
+            <li ng-repeat="item in shoppingList2">{{$index + 1}}. Buy {{ item.quantity }} of {{ item.name}}.</li>
+        </ul>
+        <h3>Add new Item to the ShoppingList :</h3>
+        <input type="text" placeholder="name of Item" ng-model="nameofItem">
+        <br><br>
+        <input type="number" placeholder="quantity of Item" ng-model="quantityofItem">
+        <br><br>
+        <button ng-click="addItem()">Add</button>
+    </div>
+
+    <script src="angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
